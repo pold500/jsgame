@@ -12,6 +12,8 @@ function Vector(x, y) {
 	this.y = y || 0;
 }
 
+
+
 /* INSTANCE METHODS */
 
 Vector.prototype = {
@@ -102,6 +104,11 @@ Vector.prototype = {
 };
 
 /* STATIC METHODS */
+var createVector = function(v)
+{
+	return new Vector(v.x, v.y);
+}
+
 Vector.negative = function(v) {
 	return new Vector(-v.x, -v.y);
 };
